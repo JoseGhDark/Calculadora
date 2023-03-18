@@ -1,0 +1,57 @@
+import math
+
+def main():
+    print("Bienvenido a la calculadora científica en Python")
+    print("Las operaciones disponibles son: suma (+), resta (-), multiplicación (*), división (/), exponenciación (pow), raíz cuadrada (sqrt), logaritmo natural (ln) y logaritmo en base 10 (log)")
+    
+    operacion = input("Ingrese la operación que desea realizar: ")
+    
+    if operacion == "+" or operacion == "-" or operacion == "*" or operacion == "/":
+        num1 = float(input("Ingrese el primer número: "))
+        num2 = float(input("Ingrese el segundo número: "))
+        
+        if operacion == "+":
+            resultado = num1 + num2
+        elif operacion == "-":
+            resultado = num1 - num2
+        elif operacion == "*":
+            resultado = num1 * num2
+        elif operacion == "/":
+            resultado = num1 / num2
+            
+        print("El resultado es:", resultado)
+        
+    elif operacion == "pow":
+        num1 = float(input("Ingrese la base: "))
+        num2 = float(input("Ingrese el exponente: "))
+        
+        resultado = math.pow(num1, num2)
+        
+        print("El resultado es:", resultado)
+        
+    elif operacion == "sqrt":
+        num = float(input("Ingrese el número: "))
+        
+        resultado = math.sqrt(num)
+        
+        print("El resultado es:", resultado)
+        
+    elif operacion == "ln":
+        num = float(input("Ingrese el número: "))
+        
+        resultado = math.log(num)
+        
+        print("El resultado es:", resultado)
+        
+    elif operacion == "log":
+        num = float(input("Ingrese el número: "))
+        
+        resultado = math.log10(num)
+        
+        print("El resultado es:", resultado)
+        
+    else:
+        print("Operación no válida. Por favor, intente de nuevo.")
+        
+if __name__ == "__main__":
+    main()
